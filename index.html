@@ -1106,125 +1106,8 @@
         }
 
     </style>
-
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"></script>
-
-<script>
-    // Tu configuración de Firebase
-    const firebaseConfig = {
-        apiKey: "AIzaSyBZhWsp5JODo0m1fcnUCw0w-SdVWK5RFzk",
-        authDomain: "omega---fijo-soporte.firebaseapp.com",
-        projectId: "omega---fijo-soporte",
-        storageBucket: "omega---fijo-soporte.firebasestorage.app",
-        messagingSenderId: "725387515426",
-        appId: "1:725387515426:web:3fcd5944419093e8dadc7b",
-        measurementId: "G-HQ4R55SDNZ" // Measurement ID es opcional y para Analytics, no afecta Auth
-    };
-
-    // Inicializa Firebase
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth(); // Obtén la instancia de autenticación
-
-    // Referencias a elementos del DOM
-    const landingPage = document.getElementById('landingPage');
-    const mainContentPage = document.getElementById('mainContentPage');
-    const signInMicrosoftBtn = document.getElementById('signInMicrosoftBtn');
-    const authStatus = document.getElementById('authStatus'); // Para mostrar el estado de autenticación
-    const signOutButton = document.getElementById('signOutButton'); // Botón de cerrar sesión
-
-    // Función para mostrar la página principal y ocultar la de aterrizaje
-    function showMainContent() {
-        if (landingPage) landingPage.style.display = 'none';
-        if (mainContentPage) mainContentPage.style.display = 'block';
-        if (bottomWidgetsContainer) bottomWidgetsContainer.style.display = 'flex';
-        loadAllSavedData(); // Cargar datos guardados al entrar
-        initializeDraggableElements(); 
-        positionWidgetButtons(); 
-        showImportantNoticeModal(); // Mostrar el modal de aviso
-    }
-
-    // Función para mostrar la página de aterrizaje y ocultar la principal
-    function showLandingPage() {
-        if (landingPage) landingPage.style.display = 'flex';
-        if (mainContentPage) mainContentPage.style.display = 'none';
-        if (bottomWidgetsContainer) bottomWidgetsContainer.style.display = 'none';
-    }
-
-    // Listener para el botón de inicio de sesión de Microsoft
-    if (signInMicrosoftBtn) {
-        signInMicrosoftBtn.addEventListener('click', () => {
-            const provider = new firebase.auth.OAuthProvider('microsoft.com');
-
-            // Opcional: Solicitar permisos adicionales de Microsoft Graph si es necesario
-            // provider.addScope('user.read');
-            // provider.addScope('Mail.Read');
-
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    // Inicio de sesión exitoso
-                    const user = result.user;
-                    console.log("Usuario autenticado con Microsoft:", user);
-                    authStatus.textContent = `Bienvenido, ${user.displayName || user.email}!`;
-                    showMainContent(); // Mostrar la página principal
-
-                })
-                .catch((error) => {
-                    // Manejar errores
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    const email = error.email;
-                    // const credential = error.credential; // No se usa directamente aquí
-
-                    console.error("Error al iniciar sesión con Microsoft:", errorCode, errorMessage);
-                    createCustomAlert(`Error al iniciar sesión: ${errorMessage}`);
-
-                    if (errorCode === 'auth/account-exists-with-different-credential') {
-                        createCustomAlert(`Ya existe una cuenta con el correo ${email} usando otro método de inicio de sesión.`);
-                    }
-                });
-        });
-    }
-
-    // Manejar el estado de autenticación al cargar la página
-    auth.onAuthStateChanged((user) => {
-        if (user) {
-            // El usuario está conectado
-            console.log("Usuario ya conectado:", user);
-            authStatus.textContent = `Bienvenido, ${user.displayName || user.email}!`;
-            showMainContent(); // Mostrar la página principal
-        } else {
-            // El usuario no está conectado
-            console.log("Usuario no conectado.");
-            authStatus.textContent = `Por favor, inicia sesión.`;
-            showLandingPage(); // Mostrar la página de aterrizaje
-        }
-    });
-
-    // Opcional: Añadir un botón de cerrar sesión en la barra de título
-    // Asegúrate de que este botón exista en tu HTML, por ejemplo, dentro de #mainTitleBar
-    // <button id="signOutButton" class="button data-action-btn" title="Cerrar Sesión">Cerrar Sesión</button>
-    if (signOutButton) {
-        signOutButton.addEventListener('click', () => {
-            createCustomConfirm('¿Estás seguro de que quieres cerrar tu sesión?', () => {
-                auth.signOut().then(() => {
-                    console.log("Sesión cerrada.");
-                    createCustomAlert("Sesión cerrada correctamente.");
-                    // onAuthStateChanged se encargará de llamar a showLandingPage()
-                }).catch((error) => {
-                    console.error("Error al cerrar sesión:", error);
-                    createCustomAlert("Error al cerrar sesión.");
-                });
-            });
-        });
-    }
-
-</script>
-
 </head>
 <body>
-
     <canvas id="neuronCanvas"></canvas>
 
     <div id="landingPage">
@@ -1244,12 +1127,8 @@
             </svg>
             MEGA - FIJO SOPORTE
         </h1>
-        <p style="font-size: 1.5em; color: var(--texto-oscuro); margin-bottom: 30px;">Inicia sesión para acceder a tu versión corporativa.</p>
-        <button id="signInMicrosoftBtn" class="button">
-            Iniciar Sesión con Microsoft
-        </button>
-        <div id="authStatus" style="margin-top: 20px; font-size: 1.1em; color: var(--texto-intermedio);"></div>
-    </div>
+        <button id="siguienteBtn" class="button">Siguiente</button>
+        </div>
 
     <div id="mainContentPage">
         <div id="mainTitleBar">
@@ -1281,7 +1160,6 @@
                 <button id="exportDataBtn" class="button data-action-btn" title="Exportar datos">Exportar</button>
                 <label for="importDataInput" class="button data-action-btn" title="Importar datos" style="cursor:pointer;">Importar</label>
                 <input type="file" id="importDataInput" accept=".json" style="display:none;">
-                <button id="signOutButton" class="button data-action-btn clear-button" title="Cerrar Sesión">Cerrar Sesión</button>
             </div>
         </div>
 
@@ -1738,7 +1616,7 @@
         // --- GLOBAL ELEMENTS ---
         const landingPage = document.getElementById('landingPage');
         const mainContentPage = document.getElementById('mainContentPage');
-        // const siguienteBtn = document.getElementById('siguienteBtn'); // Eliminado, ahora el inicio de sesión maneja esto
+        const siguienteBtn = document.getElementById('siguienteBtn');
         const backupTemplatesTextarea = document.getElementById('backupTemplatesTextarea'); 
 
         // --- THEME WIDGET ELEMENTS ---
@@ -1789,10 +1667,17 @@
         let openWidgetPanel = null; 
 
         // --- LANDING PAGE ---
-        // La lógica de mostrar/ocultar la landing page ahora se maneja en el script de autenticación
-        // con `showMainContent()` y `showLandingPage()`.
-        // El botón 'siguienteBtn' se ha eliminado del HTML y su funcionalidad es reemplazada
-        // por el éxito del inicio de sesión con Microsoft.
+        if (siguienteBtn) {
+            siguienteBtn.addEventListener('click', function () {
+                if (landingPage) landingPage.style.display = 'none';
+                if (mainContentPage) mainContentPage.style.display = 'block';
+                if (bottomWidgetsContainer) bottomWidgetsContainer.style.display = 'flex';
+                loadAllSavedData(); // Load all data on initial entry
+                initializeDraggableElements(); 
+                positionWidgetButtons(); 
+                showImportantNoticeModal(); // Show the new modal after loading main content
+            });
+        }
 
         // --- TAB LOGIC ---
         const tabLinks = document.querySelectorAll('.tab-link');
@@ -3590,8 +3475,6 @@
 
 
         // Final initializations
-        // No es necesario llamar a showMainContent() o showLandingPage() aquí,
-        // ya que onAuthStateChanged lo manejará al cargar la página.
         if (document.querySelector('.tab-link.active')) {
             document.getElementById(document.querySelector('.tab-link.active').dataset.tab).classList.add('active');
         }
