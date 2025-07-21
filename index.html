@@ -1437,10 +1437,7 @@
             <!-- New Tab Content for Avisos (from recuadros.html) -->
             <div id="tab7" class="tab-content">
                 <div class="main-container-tab" id="tab7-main-container">
-                   <div class="notices-display draggable-box" id="noticesList">
-                        <h3>Avisos Importantes</h3>
-                        <!-- Notices will be rendered here by JavaScript -->
-                    </div>
+                   <!-- El recuadro de "Avisos Importantes" ha sido eliminado de aquí -->
 
                     <!-- Recuadro de documento 1 -->
                     <div class="document-viewer-box draggable-box" id="documentViewer1">
@@ -1472,20 +1469,7 @@
                         </div>
                     </div>
 
-                    <!-- Recuadro de documento 3 -->
-                    <div class="document-viewer-box draggable-box" id="documentViewer3">
-                        <h3 class="drag-handle">
-                            <span>DOCUMENTO ADICIONAL 3</span>
-                            <button type="button" class="edit-title-btn" onclick="editBoxTitle(this.closest('.drag-handle').querySelector('span'))">✏️</button>
-                        </h3>
-                        <div class="document-iframe-container">
-                            <iframe id="docIframe3" src="" style="width: 100%; height: 100%; border: none; border-radius: 8px;"
-                                    onerror="this.style.display='none'; this.parentNode.innerHTML += '<div class=\'iframe-error-message\'>No se pudo cargar el documento. Verifique los permisos o el enlace.</div>'"></iframe>
-                        </div>
-                        <div style="text-align: center; margin-top: 10px;">
-                            <button class="button" onclick="loadDocumentInIframe('docIframe3', 'https://docs.google.com/document/d/e/2PACX-1vQbmQQdlbeHkpEMA9CwGFWUwj7gq4pR6Prx7fHng1MOUGqNUGUuRUUc94qogeiHj6Bu1MavE3wzpUDZ/pub?embedded=true')">Cargar Documento 3 (DOC)</button>
-                        </div>
-                    </div>
+                    <!-- Los recuadros de documento 3 y los recuadros dinámicos han sido eliminados de aquí -->
                 </div>
             </div>
             <!-- End New Tab Content for Avisos -->
@@ -1702,7 +1686,7 @@
 
                 // Special handling for Avisos tab
                 if (tabId === 'tab7') {
-                    renderHardcodedNotices();
+                    // No longer calling renderHardcodedNotices() as it's removed
                 }
 
                 // The calls to actualizarPruebasRealizadas() and updateMemoPruebasRealizadas()
@@ -2773,59 +2757,17 @@
 
         // --- AVISOS TAB (TAB 7) ---
         const noticesListDiv = document.getElementById('noticesList');
-        const hardcodedNotices = [
-            {
-                title: "Actualización Importante: Horarios de Soporte",
-                content: "A partir del 15 de Julio, el horario de soporte técnico se extiende hasta las 22:00 hrs. de lunes a viernes. Los fines de semana se mantienen igual.",
-                createdAt: new Date('2025-07-10T09:00:00'),
-                updatedAt: new Date('2025-07-10T09:00:00')
-            },
-            {
-                title: "Nueva Plantilla de Memos Disponible",
-                content: "Se ha añadido una nueva plantilla de memos para 'Problemas de Conectividad GPON'. Por favor, revísenla en la pestaña de Memos de Quejas.",
-                createdAt: new Date('2025-07-08T14:30:00'),
-                updatedAt: new Date('2025-07-08T14:30:00')
-            },
-            {
-                title: "Recordatorio: Protocolo de Escalación",
-                content: "Recuerden seguir el protocolo de escalación para casos de alta complejidad. Asegúrense de documentar todos los pasos en la plantilla genérica.",
-                createdAt: new Date('2025-07-05T11:00:00'),
-                updatedAt: new Date('2025-07-05T11:00:00')
-            }
-        ];
+        // El array hardcodedNotices ha sido eliminado, ya que el recuadro que lo mostraba fue removido.
 
         function renderHardcodedNotices() {
-            // The noticesListDiv is not present in the current HTML structure for tab7.
-            // The document viewer boxes are used instead.
-            // This function is kept for completeness but won't directly render notices in the current setup.
+            // Esta función ya no es necesaria ya que el recuadro noticesListDiv ha sido eliminado.
+            // Se mantiene como un placeholder si en el futuro se desea añadir lógica de avisos.
             if (!noticesListDiv) {
-                console.warn("Warning: noticesListDiv not found. Hardcoded notices will not be displayed in a list format.");
+                console.warn("Warning: noticesListDiv not found. Hardcoded notices will not be displayed.");
                 return;
             }
-            noticesListDiv.innerHTML = ''; // Limpiar contenido actual
-            if (hardcodedNotices.length === 0) {
-                noticesListDiv.innerHTML = '<p class="no-notices-message">No hay avisos disponibles en este momento.</p>';
-                return;
-            }
-            const sortedNotices = [...hardcodedNotices].sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
-
-            sortedNotices.forEach((notice) => {
-                const noticeElement = document.createElement('div');
-                noticeElement.className = 'notice-item';
-                const createdAt = notice.createdAt ? notice.createdAt.toLocaleString() : 'Fecha desconocida';
-                const updatedAt = notice.updatedAt ? notice.updatedAt.toLocaleString() : 'Fecha desconocida';
-
-                noticeElement.innerHTML = `
-                    <h4>${notice.title}</h4>
-                    <p>${notice.content}</p>
-                    <div class="notice-meta">
-                        Creado: ${createdAt} <br>
-                        Última actualización: ${updatedAt}
-                    </div>
-                `;
-                noticesListDiv.appendChild(noticeElement);
-            });
-            console.log("Hardcoded notices rendered.");
+            noticesListDiv.innerHTML = '<p class="no-notices-message">No hay avisos disponibles en este momento.</p>';
+            console.log("Hardcoded notices rendering logic skipped as the display box is removed.");
         }
 
         // --- Document Viewer Functions ---
@@ -3295,6 +3237,14 @@
                 </div>
             `;
             newBox.appendChild(contentDiv);
+            const dynamicCheckboxGroup = newBox.querySelector('.checkbox-group.dynamic-checkbox-area');
+            // dynamicCheckboxes is not defined here. It should be passed if recreating from saved state.
+            // For a newly added box, this array would be empty.
+            // if (dynamicCheckboxGroup && dynamicCheckboxes.length > 0) {
+            //     dynamicCheckboxes.forEach(cb => {
+            //         addCheckboxItem(dynamicCheckboxGroup, cb.title, cb.value, cb.checked);
+            //     });
+            // }
             container.appendChild(newBox);
             newBox.style.position = 'absolute';
             newBox.style.left = '20px'; 
