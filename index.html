@@ -1800,6 +1800,22 @@
             { label: "Contacto en sitio", type: "text", id: "wf_wifi_contacto_sitio" },
             { label: "Teléfonos de referencias", type: "text", id: "wf_wifi_tels_referencias" },
             { label: "Dirección", type: "text", id: "wf_wifi_direccion" }
+        ],
+        // Nuevo formulario para MEMOS DE WF - SEGUIMIENTO DE CASO - Reparación en plazo vigente
+        "reparación en plazo vigente": [
+            { label: "Teléfono de referencia", type: "text", id: "wf_reparacion_plazo_vigente_tel_ref" },
+            { label: "Comentarios", type: "textarea", id: "wf_reparacion_plazo_vigente_comentarios", defaultValue: "Seguimiento a queja en tiempo Vigente" },
+            { label: "No. Queja", type: "text", id: "wf_reparacion_plazo_vigente_no_queja" },
+            { label: "Hora visita", type: "text", id: "wf_reparacion_plazo_vigente_hora_visita", defaultValue: "8:00 a 5:00" },
+            { label: "Pruebas Realizadas", type: "textarea", id: "wf_reparacion_plazo_vigente_pruebas_realizadas", defaultValue: "Cl Indica que no ha llegado el técnico y le urge, por favor verificar." }
+        ],
+        // Nuevo formulario para MEMOS DE WF - Otros WF
+        "otros wf": [
+            { label: "Nombre de contacto", type: "text", id: "wf_otros_nombre_contacto" },
+            { label: "Teléfonos de referencia", type: "text", id: "wf_otros_tels_referencia" },
+            { label: "Numero de orden y/o queja", type: "text", id: "wf_otros_num_orden_queja" },
+            { label: "Inconveniente del cliente", type: "textarea", id: "wf_otros_inconveniente_cliente" },
+            { label: "Pruebas Realizada", type: "textarea", id: "wf_otros_pruebas_realizadas" }
         ]
     };
 
@@ -1825,6 +1841,14 @@
             { label: "HORARIO DE VISITA", type: "text", id: "orden_repetidores_horario_visita" },
             { label: "OBSERVACIONES", type: "textarea", id: "orden_repetidores_observaciones" },
             { label: "TIENDA / CALL CENTER", type: "text", id: "orden_repetidores_tienda" }
+        ],
+        // Nuevo formulario para MEMOS DE ORDEN - SEGUIMIENTO DE CASO - Instalación en plazo vigente
+        "instalación en plazo vigente": [
+            { label: "Teléfono de referencia", type: "text", id: "orden_instalacion_plazo_vigente_tel_ref" },
+            { label: "No. de O/S", type: "text", id: "orden_instalacion_plazo_vigente_no_os" },
+            { label: "Comentarios", type: "textarea", id: "orden_instalacion_plazo_vigente_comentarios", defaultValue: "Seguimiento a orden en tiempo Vigente" },
+            { label: "Hora visita", type: "text", id: "orden_instalacion_plazo_vigente_hora_visita", defaultValue: "8:00 a 5:00" },
+            { label: "Pruebas Realizadas", type: "textarea", id: "orden_instalacion_plazo_vigente_pruebas_realizadas", defaultValue: "Cliente solicita informacion sobre instalacion, se encuentra en tiempo vigente" }
         ]
     };
 
@@ -2817,7 +2841,7 @@
             for (const key in predefinedWFMemos) {
                 const option = document.createElement('option');
                 option.value = key;
-                option.textContent = key;
+                option.textContent = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()); // Format for display
                 wfMemosDropdown.appendChild(option);
             }
         }
@@ -2839,6 +2863,7 @@
                 input.placeholder = field.label;
                 input.className = 'dynamic-input';
                 if (field.id) input.id = field.id;
+                if (field.defaultValue) input.value = field.defaultValue; // Set default value
 
                 wrapper.appendChild(labelEl);
                 wrapper.appendChild(input);
@@ -2864,7 +2889,7 @@
         });
 
         copyWFMemosButton?.addEventListener('click', function() {
-            let content = `ASUNTO: ${wfMemosDropdown.value || 'Sin Asunto'}\n`;
+            let content = `ASUNTO: ${wfMemosDropdown.options[wfMemosDropdown.selectedIndex].text || 'Sin Asunto'}\n`;
             const fields = formContainerWFMemos.querySelectorAll('.dynamic-input, textarea');
             fields.forEach(field => {
                 const label = field.previousElementSibling ? field.previousElementSibling.textContent.replace(':', '').trim() : field.placeholder;
@@ -2907,7 +2932,7 @@
             for (const key in predefinedOrdenMemos) {
                 const option = document.createElement('option');
                 option.value = key;
-                option.textContent = key;
+                option.textContent = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()); // Format for display
                 ordenMemosDropdown.appendChild(option);
             }
         }
@@ -2929,6 +2954,7 @@
                 input.placeholder = field.label;
                 input.className = 'dynamic-input';
                 if (field.id) input.id = field.id;
+                if (field.defaultValue) input.value = field.defaultValue; // Set default value
 
                 wrapper.appendChild(labelEl);
                 wrapper.appendChild(input);
@@ -2954,7 +2980,7 @@
         });
 
         copyOrdenMemosButton?.addEventListener('click', function() {
-            let content = `ASUNTO: ${ordenMemosDropdown.value || 'Sin Asunto'}\n`;
+            let content = `ASUNTO: ${ordenMemosDropdown.options[ordenMemosDropdown.selectedIndex].text || 'Sin Asunto'}\n`;
             const fields = formContainerOrdenMemos.querySelectorAll('.dynamic-input, textarea');
             fields.forEach(field => {
                 const label = field.previousElementSibling ? field.previousElementSibling.textContent.replace(':', '').trim() : field.placeholder;
