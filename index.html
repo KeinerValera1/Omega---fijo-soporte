@@ -1212,7 +1212,6 @@
                 <button class="tab-link" data-tab="tab-copia-respaldo">COPIA DE RESPALDO</button>
             </div>
 
-            <!-- PLANTILLAS Tab Content -->
             <div id="tab-plantillas" class="tab-content active">
                 <div class="tab-nav sub-tab-nav">
                     <button class="tab-link sub-tab-link active" data-tab="sub-tab-genericas">PLANTILLAS GENERICAS</button>
@@ -1221,7 +1220,6 @@
                     <button class="tab-link sub-tab-link" data-tab="sub-tab-orden">MEMOS DE ORDEN</button>
                 </div>
 
-                <!-- PLANTILLAS GENERICAS Sub-Tab Content (Original tab1) -->
                 <div id="sub-tab-genericas" class="tab-content sub-tab-content active">
                     <div class="main-container-tab">
                         <div class="form-container draggable-box" id="form-container-tab1">
@@ -1311,7 +1309,6 @@
                     </div>
                 </div>
 
-                <!-- PLANTILLAS DE QUEJAS Sub-Tab Content (Original tab2, renamed) -->
                 <div id="sub-tab-quejas" class="tab-content sub-tab-content">
                     <div class="main-container-tab">
                         <div class="memos-config-area draggable-box" id="memos-config-area-tab2">
@@ -1409,7 +1406,6 @@
                     </div>
                 </div>
 
-                <!-- MEMOS DE WF Sub-Tab Content (NEW) -->
                 <div id="sub-tab-wf" class="tab-content sub-tab-content">
                     <div class="main-container-tab">
                         <div class="wf-memos-area draggable-box" id="wf-memos-area-tab-wf">
@@ -1420,8 +1416,7 @@
                             <div class="dropdown-container">
                                 <select class="dropdown" id="wfMemosDropdown">
                                     <option selected disabled value="">-- Seleccione Plantilla WF --</option>
-                                    <!-- Options will be populated by JS -->
-                                </select>
+                                    </select>
                                 <div id="formContainerWFMemos"></div>
                                 <div class="button-group" style="margin-top: 20px;">
                                     <button id="copyWFMemosButton" class="button">Copiar Memo WF</button>
@@ -1432,7 +1427,6 @@
                     </div>
                 </div>
 
-                <!-- MEMOS DE ORDEN Sub-Tab Content (NEW) -->
                 <div id="sub-tab-orden" class="tab-content sub-tab-content">
                     <div class="main-container-tab">
                         <div class="orden-memos-area draggable-box" id="orden-memos-area-tab-orden">
@@ -1443,8 +1437,7 @@
                             <div class="dropdown-container">
                                 <select class="dropdown" id="ordenMemosDropdown">
                                     <option selected disabled value="">-- Seleccione Plantilla de Orden --</option>
-                                    <!-- Options will be populated by JS -->
-                                </select>
+                                    </select>
                                 <div id="formContainerOrdenMemos"></div>
                                 <div class="button-group" style="margin-top: 20px;">
                                     <button id="copyOrdenMemosButton" class="button">Copiar Memo de Orden</button>
@@ -1456,7 +1449,6 @@
                 </div>
             </div>
 
-            <!-- HERRAMIENTAS Tab Content -->
             <div id="tab-herramientas" class="tab-content">
                 <div class="tab-nav sub-tab-nav">
                     <button class="tab-link sub-tab-link active" data-tab="sub-tab-tmo">CALCULADORA TMO</button>
@@ -1480,7 +1472,6 @@
                 </div>
             </div>
 
-            <!-- TRANSFERENCIAS Tab Content (Original tab4) -->
             <div id="tab-transferencias" class="tab-content">
                 <div class="transfers-container draggable-box" id="transfers-container-tab4" style="max-width: 700px; margin: auto;">
                     <h5 class="drag-handle">
@@ -1495,10 +1486,8 @@
                 </div>
             </div>
 
-            <!-- AVISOS Tab Content (Original tab7) -->
             <div id="tab-avisos" class="tab-content">
                 <div class="main-container-tab" id="tab7-main-container">
-                    <!-- Recuadro de PROCESOS DE MIGRACIÓN -->
                     <div class="document-viewer-box draggable-box" id="documentViewer1">
                         <h3 class="drag-handle">
                             <span>PROCESOS DE MIGRACIÓN</span>
@@ -1513,7 +1502,6 @@
                         </div>
                     </div>
 
-                    <!-- Recuadro de documento 2 -->
                     <div class="document-viewer-box draggable-box" id="documentViewer2">
                         <h3 class="drag-handle">
                             <span>SEGUIMIENTO DE CASOS</span>
@@ -1527,10 +1515,23 @@
                             <button class="button" onclick="loadDocumentInIframe('docIframe2', 'https://docs.google.com/document/d/e/2PACX-1vRketVsJaYapfC4lwnzYr1ndlm6WoCUmRsAY0TQEzYMVfhd3kXOwyuY-jWZG4YAx7qeqUWH50t_0-0Q/pub?embedded=true')">Cargar Documento 2 (DOC)</button>
                         </div>
                     </div>
+
+                    <div class="document-viewer-box draggable-box" id="documentViewer3">
+                        <h3 class="drag-handle">
+                            <span>IMAGENES</span>
+                            <button type="button" class="edit-title-btn" onclick="editBoxTitle(this.closest('.drag-handle').querySelector('span'))">✏️</button>
+                        </h3>
+                        <div class="document-iframe-container">
+                            <iframe id="docIframe3" src="" style="width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    onerror="this.style.display='none'; this.parentNode.innerHTML += '<div class=\'iframe-error-message\'>No se pudo cargar el documento. Verifique los permisos o el enlace.</div>'"></iframe>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px;">
+                            <button class="button" onclick="loadDocumentInIframe('docIframe3', 'https://docs.google.com/document/d/e/2PACX-1vQ5OA6Y5HGYaApC_q0CKVUpQcrmo7su8n7mVt15_yaN2r_Rd9QqUEKp2B2XHEHSXYwd8ksWYcXXEDda/pub?embedded=true')">Cargar IMAGENES</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- COPIA DE RESPALDO Tab Content (Original tab5, renamed) -->
             <div id="tab-copia-respaldo" class="tab-content">
                 <div class="backup-template-group draggable-box" id="backup-template-group-tab5" style="max-width: 900px; margin: auto;">
                     <h3 class="drag-handle">
@@ -1630,7 +1631,6 @@
         </div>
     </div>
 
-    <!-- Modal de Aviso Importante -->
     <div id="importantNoticeModal" class="popup-modal">
         <div class="popup-content">
             <h2>¡AVISO IMPORTANTE!</h2>
