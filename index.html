@@ -21,7 +21,7 @@
             --rojo-oscuro: #c0392b;
             --verde-claro: #28a745; /* Para botón "Agregar Recuadro" */
             --verde-oscuro: #218838; /* Hover para botón "Agregar Recuadro" */
-            
+
             /* Colores para la animación de neuronas */
             --neuron-color-1-rgb: "106, 27, 154"; /* Morado */
             --neuron-color-2-rgb: "0, 188, 212";   /* Turquesa */
@@ -76,16 +76,16 @@
         }
 
         #landingPage h1 .logo-inline {
-            width: 1.8em; 
-            height: 1.8em; 
+            width: 1.8em;
+            height: 1.8em;
             vertical-align: middle; /* Alineación vertical */
         }
         /* Logo en landing page (si se usa) */
         #landingPageLogo {
             position: absolute;
             top: 20px;
-            left: 20px; 
-            height: 60px; 
+            left: 20px;
+            height: 60px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
@@ -105,7 +105,7 @@
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 0.5px;
-            margin: 5px; 
+            margin: 5px;
         }
 
         .button:hover, button.data-action-btn:hover {
@@ -127,7 +127,7 @@
         }
 
         .manage-button {
-            background: var(--morado); 
+            background: var(--morado);
             color: var(--blanco);
             padding: 5px 10px;
             font-size: 12px;
@@ -145,7 +145,7 @@
 
         /* Página de Contenido Principal y Barra de Título */
         #mainContentPage {
-            display: none; 
+            display: none;
             width: 100%;
             min-height: 100vh;
             position: relative;
@@ -160,15 +160,15 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: var(--azul-oscuro); 
-            color: var(--blanco); 
-            padding: 10px 20px; 
-            border-bottom: 3px solid var(--turquesa); 
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            padding: 10px 20px;
+            border-bottom: 3px solid var(--turquesa);
             z-index: 1000;
             font-size: 1.8em;
             font-weight: 700;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            height: 70px; 
+            height: 70px;
             box-sizing: border-box;
             display: flex;
             justify-content: space-between;
@@ -176,33 +176,33 @@
         }
         #mainTitleText { flex-grow: 1; text-align: center; color: var(--blanco); }
         .data-actions-container {
-            display: flex; 
-            flex-direction: row; 
-            gap: 10px; 
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
             align-items: center;
-            margin-left: 20px; 
+            margin-left: 20px;
         }
         .data-actions-container button.data-action-btn, .data-actions-container label.data-action-btn {
             padding: 8px 15px;
             font-size: 14px;
             border-radius: 20px;
-            background: var(--morado); 
+            background: var(--morado);
             color: var(--blanco);
-            display: flex; 
+            display: flex;
             align-items: center;
             justify-content: center;
         }
         .data-actions-container button.data-action-btn:hover, .data-actions-container label.data-action-btn:hover {
-            background: var(--azul-oscuro); 
+            background: var(--azul-oscuro);
         }
-        
+
         #headerLogo {
-            height: 65px; 
-            width: 65px; 
+            height: 65px;
+            width: 65px;
             border-radius: 8px;
             margin-right: 15px;
         }
-        #mainTitleBar .logo-left { margin-right: auto; } 
+        #mainTitleBar .logo-left { margin-right: auto; }
 
 
         /* Timer en la barra superior */
@@ -218,7 +218,7 @@
         #topTimerDisplay {
             font-size: 1.1em;
             font-weight: 700;
-            color: var(--turquesa); 
+            color: var(--turquesa);
         }
         #topTimerInputMinutes {
             width: 60px;
@@ -235,10 +235,10 @@
         }
         #topTimerControls button {
             padding: 6px 12px;
-            font-size: 0.8em; 
+            font-size: 0.8em;
             border-radius: 15px;
-            background: var(--turquesa); 
-            color: var(--azul-oscuro); 
+            background: var(--turquesa);
+            color: var(--azul-oscuro);
             border: none;
             cursor: pointer;
             transition: background 0.2s ease;
@@ -258,14 +258,14 @@
         /* Estilos para Tabs */
         .tab-container {
             width: 100%;
-            padding-top: 70px; 
+            padding-top: 70px;
         }
         .tab-nav {
             display: flex;
             background-color: var(--texto-oscuro); /* #333 */
-            border-bottom: 1px solid var(--morado); 
+            border-bottom: 1px solid var(--morado);
             position: sticky;
-            top: 70px; 
+            top: 70px;
             z-index: 999;
             flex-wrap: wrap;
         }
@@ -282,8 +282,8 @@
         }
         .tab-link:hover { background-color: #444; color: var(--blanco); } /* #444 podría ser var(--gris-oscuro-hover) */
         .tab-link.active {
-            border-bottom-color: var(--turquesa); 
-            color: var(--turquesa); 
+            border-bottom-color: var(--turquesa);
+            color: var(--turquesa);
             font-weight: 700; background-color: #2a2a2a; /* Podría ser var(--gris-muy-oscuro) */
         }
         .tab-link.sub-tab-link {
@@ -302,8 +302,8 @@
             padding: 25px;
             animation: fadeInTab 0.5s;
             background-color: transparent;
-            position: relative; 
-            padding-bottom: 100px; 
+            position: relative;
+            padding-bottom: 100px;
         }
         .tab-content.active { display: block; }
         .tab-content.sub-tab-content {
@@ -316,8 +316,8 @@
 
 
         /* Contenedores de Formularios y Secciones */
-        .main-container-tab { 
-            display: flex; 
+        .main-container-tab {
+            display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 25px;
@@ -332,49 +332,49 @@
             border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.2s ease;
-            margin-bottom: 25px; 
-            position: relative; 
-            z-index: 1; 
-            width: calc(33% - 20px); 
-            min-width: 280px; 
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            width: calc(33% - 20px);
+            min-width: 280px;
             box-sizing: border-box;
-            resize: both; 
-            overflow: auto; 
-            cursor: default; 
+            resize: both;
+            overflow: auto;
+            cursor: default;
         }
         .draggable-box.dragging {
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            z-index: 100; 
+            z-index: 100;
             opacity: 0.9;
         }
-        
+
         .drag-handle {
             cursor: grab;
             padding-bottom: 10px;
             margin-bottom: 20px;
             border-bottom: 2px solid rgba(106, 27, 154, 0.3); /* Morado transparente, podría ser var(--morado-transparente) */
-            display: flex; 
+            display: flex;
             justify-content: center;
             align-items: center;
-            position: relative; 
+            position: relative;
         }
         .drag-handle:active { cursor: grabbing; }
 
         .draggable-box h2, .draggable-box h3, .draggable-box h5 {
             text-align: center; margin-top: 0;
-            font-weight: 700; color: var(--azul-oscuro); 
-            font-size: 2em; 
-            flex-grow: 1; 
+            font-weight: 700; color: var(--azul-oscuro);
+            font-size: 2em;
+            flex-grow: 1;
         }
-        .draggable-box h3 { font-size: 1.8em; } 
-        .draggable-box h5 { font-size: 1.6em; } 
+        .draggable-box h3 { font-size: 1.8em; }
+        .draggable-box h5 { font-size: 1.6em; }
 
         .edit-title-btn, .remove-box-btn {
             background: none;
             border: none;
             font-size: 1.2em;
             cursor: pointer;
-            color: var(--morado); 
+            color: var(--morado);
             margin-left: 10px;
             padding: 5px;
             border-radius: 50%;
@@ -396,7 +396,7 @@
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .form-group input:focus, .form-group textarea:focus, .dropdown:focus, .dynamic-input:focus {
-            border-color: var(--turquesa); 
+            border-color: var(--turquesa);
             box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.2); /* Sombra turquesa, podría ser var(--turquesa-sombra) */
             outline: none;
         }
@@ -412,7 +412,7 @@
         }
         .checkbox-item-container label:hover { color: var(--morado); }
         .checkbox-item-container input[type="checkbox"] {
-            margin-right: 12px; transform: scale(1.3); accent-color: var(--turquesa); 
+            margin-right: 12px; transform: scale(1.3); accent-color: var(--turquesa);
             min-width: 18px; min-height: 18px;
         }
         .add-item-btn-container { margin-top: 15px; text-align: right; }
@@ -426,14 +426,14 @@
         #formContainerMemoQuejas .form-group label,
         #formContainerWFMemos .form-group label,
         #formContainerOrdenMemos .form-group label {
-            font-size: 15px; 
+            font-size: 15px;
             margin-bottom: 6px;
         }
         #formContainerMemoQuejas .dynamic-input, #formContainerMemoQuejas textarea,
         #formContainerWFMemos .dynamic-input, #formContainerWFMemos textarea,
         #formContainerOrdenMemos .dynamic-input, #formContainerOrdenMemos textarea {
              padding: 12px;
-             font-size: 16px; 
+             font-size: 16px;
              border-radius: 8px;
         }
          #formContainerMemoQuejas textarea,
@@ -451,13 +451,13 @@
         .dynamic-checkbox-group > label {
             display: block;
             margin-bottom: 10px;
-            color: var(--azul-oscuro); 
-            font-size: 16px; 
+            color: var(--azul-oscuro);
+            font-size: 16px;
             font-weight: 500;
         }
         .dynamic-checkbox-group input[type="checkbox"] {
             margin-right: 8px;
-            accent-color: var(--turquesa); 
+            accent-color: var(--turquesa);
             transform: scale(1.2);
         }
         /* Estilo para que los checkboxes en grupos dinámicos sean horizontales */
@@ -471,7 +471,7 @@
             align-items: center;
         }
          .checkbox-group-inline div label {
-            font-size: 16px; 
+            font-size: 16px;
             color: #444; /* Podría ser var(--texto-oscuro-ligero) */
             cursor: pointer;
             margin-bottom: 0;
@@ -500,7 +500,7 @@
         }
         .transfers-list p {
             margin: 8px 0;
-            font-size: 16px; 
+            font-size: 16px;
             color: var(--texto-intermedio);
             line-height: 1.6;
             display: flex;
@@ -508,7 +508,7 @@
             align-items: center;
         }
         .transfers-list strong {
-            color: var(--azul-oscuro); 
+            color: var(--azul-oscuro);
             font-weight: 700;
         }
 
@@ -527,7 +527,7 @@
         /* Contenedor de Widgets Inferiores y Botones Toggle */
         #bottomWidgetsContainer {
             position: fixed; bottom: 0; right: 0; padding: 10px;
-            display: none; 
+            display: none;
             gap: 10px;
             z-index: 9998; align-items: flex-end;
         }
@@ -545,12 +545,12 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
             background: linear-gradient(to right, var(--azul-oscuro), var(--morado));
         }
-        .widget-toggle-button.active-toggle { 
-             background: linear-gradient(to right, var(--rojo-claro), var(--rojo-oscuro)); 
+        .widget-toggle-button.active-toggle {
+             background: linear-gradient(to right, var(--rojo-claro), var(--rojo-oscuro));
         }
         #toggleNotes { background: linear-gradient(to right, var(--turquesa), #0097A7); } /* #0097A7 podría ser var(--turquesa-oscuro) */
         #toggleNotes.active-toggle { background: linear-gradient(to right, var(--rojo-claro), var(--rojo-oscuro)); }
-        #toggleAddBox { background: linear-gradient(to right, var(--verde-claro), var(--verde-oscuro)); } 
+        #toggleAddBox { background: linear-gradient(to right, var(--verde-claro), var(--verde-oscuro)); }
         #toggleAddBox.active-toggle { background: linear-gradient(to right, var(--rojo-claro), var(--rojo-oscuro)); }
         #toggleTheme { background: linear-gradient(to right, #ff9800, #f57c00); } /* Naranja para el botón de tema */
         #toggleTheme.active-toggle { background: linear-gradient(to right, var(--rojo-claro), var(--rojo-oscuro)); }
@@ -565,19 +565,19 @@
             background: rgba(255, 255, 255, 0.98); /* Ligeramente más opaco */
             border-radius: 15px;
             box-shadow: 0 0 25px rgba(0,0,0,0.3);
-            display: none; 
+            display: none;
             flex-direction: column;
             padding: 20px;
             box-sizing: border-box;
             animation: fadeInScale 0.3s ease-out forwards;
-            border-top: 4px solid var(--morado); 
-            position: fixed; 
+            border-top: 4px solid var(--morado);
+            position: fixed;
             z-index: 9997;
         }
-        .widget-panel.active-widget { display: flex !important; } 
+        .widget-panel.active-widget { display: flex !important; }
 
         .widget-panel .widget-header {
-            font-size: 1.6em; font-weight: 700; color: var(--azul-oscuro); 
+            font-size: 1.6em; font-weight: 700; color: var(--azul-oscuro);
             text-align: center; margin-bottom: 15px; padding-bottom: 10px;
             border-bottom: 1px solid rgba(106, 27, 154, 0.3); /* Morado transparente */
         }
@@ -1030,28 +1030,28 @@
             .main-container-tab {
                 justify-content: center;
             }
-            .draggable-box { 
+            .draggable-box {
                 width: calc(33% - 20px);
                 max-width: none;
                 min-width: 280px;
             }
-            .checkboxes-area-tab { 
+            .checkboxes-area-tab {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 25px;
-                width: calc(66% - 20px); 
-                min-width: 580px; 
+                width: calc(66% - 20px);
+                min-width: 580px;
             }
             .checkboxes-area-tab .checkbox-group {
-                width: calc(50% - 12.5px); 
+                width: calc(50% - 12.5px);
             }
         }
 
         @media (max-width: 1200px) {
             #landingPage h1 { font-size: 3.5em; }
             #mainTitleBar { font-size: 1.5em; padding: 12px 15px; height: auto; flex-wrap: wrap; }
-            #mainTitleBar .logo-left { margin-right: 10px; } 
+            #mainTitleBar .logo-left { margin-right: 10px; }
             #mainTitleText { flex-basis: 100%; text-align: center; margin-bottom: 10px; }
             #topTimerContainer { flex-basis: 100%; justify-content: center; margin-bottom: 10px; }
             .data-actions-container { flex-basis: 100%; justify-content: center; margin-left: 0; }
@@ -1061,7 +1061,7 @@
                 align-items: center;
                 padding: 20px;
             }
-            .draggable-box { 
+            .draggable-box {
                 width: 95%;
                 max-width: 600px;
                 margin: 0;
@@ -1070,7 +1070,7 @@
             .checkboxes-area-tab {
                 width: 95%;
                 max-width: 600px;
-                flex-direction: row; 
+                flex-direction: row;
                 justify-content: center;
             }
             .checkboxes-area-tab .checkbox-group {
@@ -1084,7 +1084,7 @@
                 justify-content: flex-end;
             }
             .widget-panel {
-                bottom: 75px !important; 
+                bottom: 75px !important;
                 right: 10px !important;
                 left: auto !important;
             }
@@ -1095,7 +1095,7 @@
             .button { padding: 12px 20px; font-size: 16px; }
 
             #mainTitleBar { font-size: 1.3em; height: auto; flex-direction: column; padding: 8px 10px; }
-            #mainTitleBar .logo-left { margin-right: 0; margin-bottom: 5px; } 
+            #mainTitleBar .logo-left { margin-right: 0; margin-bottom: 5px; }
             #mainTitleText { margin-bottom: 5px; font-size: 1.2em; }
             .data-actions-container { margin-top: 5px; flex-wrap: wrap; justify-content: center;}
             .data-actions-container button.data-action-btn, .data-actions-container label.data-action-btn { font-size: 12px; padding: 6px 10px; }
@@ -1105,22 +1105,22 @@
             #topTimerControls button { font-size: 0.8em; padding: 5px 10px; }
 
 
-            .tab-nav { top: 120px; } 
+            .tab-nav { top: 120px; }
             .tab-container { padding-top: 120px; }
             .tab-link { font-size: 0.85em; padding: 10px 3px; }
             .tab-nav.sub-tab-nav { top: 165px; } /* Adjust for mobile sub-tabs */
             .tab-content.sub-tab-content { padding-top: 20px; } /* Adjust for mobile sub-tabs */
 
-            .draggable-box { 
-                width: 100% !important; 
-                left: 0 !important; 
-                top: auto !important; 
-                position: relative !important; 
-                margin: 10px auto !important; 
-                resize: none; 
+            .draggable-box {
+                width: 100% !important;
+                left: 0 !important;
+                top: auto !important;
+                position: relative !important;
+                margin: 10px auto !important;
+                resize: none;
             }
             .checkboxes-area-tab {
-                flex-direction: column; 
+                flex-direction: column;
                 align-items: center;
             }
             .checkboxes-area-tab .checkbox-group {
@@ -1165,7 +1165,7 @@
               <circle cx="50" cy="10" r="5" fill="var(--turquesa)" class="electron-dot"/>
               <circle cx="50" cy="90" r="5" fill="var(--blanco)" class="electron-dot"/>
             </svg>
-            MEGA - FIJO SOPORTE
+            OMEGA - FIJO SOPORTE
         </h1>
         <button id="siguienteBtn" class="button">Siguiente</button>
         </div>
@@ -1857,7 +1857,7 @@
         const landingPage = document.getElementById('landingPage');
         const mainContentPage = document.getElementById('mainContentPage');
         const siguienteBtn = document.getElementById('siguienteBtn');
-        const backupTemplatesTextarea = document.getElementById('backupTemplatesTextarea'); 
+        const backupTemplatesTextarea = document.getElementById('backupTemplatesTextarea');
 
         // --- THEME WIDGET ELEMENTS ---
         const themeWidgetPanel = document.getElementById('themeWidgetPanel');
@@ -1875,7 +1875,7 @@
             { id: 'themeColorNeuron3', neuronVar: '--neuron-color-3-rgb', type: 'neuron' },
             { id: 'themeColorNeuronConnection', neuronVar: '--neuron-connection-rgb', type: 'neuron' }
         ];
-        
+
         // Default theme values (ensure these match the :root in CSS)
         const defaultThemeSettings = {
             '--azul-oscuro': "#1A237E",
@@ -1903,9 +1903,9 @@
         const notesWidget = document.getElementById('notesWidget');
         const usersWidget = document.getElementById('usersWidget');
         const copilotWidget = document.getElementById('copilotWidget');
-        const addBoxWidget = document.getElementById('addBoxWidget'); 
+        const addBoxWidget = document.getElementById('addBoxWidget');
         const allWidgetPanels = [notesWidget, usersWidget, copilotWidget, addBoxWidget, themeWidgetPanel];
-        let openWidgetPanel = null; 
+        let openWidgetPanel = null;
 
         // --- LANDING PAGE ---
         if (siguienteBtn) {
@@ -1914,8 +1914,8 @@
                 if (mainContentPage) mainContentPage.style.display = 'block';
                 if (bottomWidgetsContainer) bottomWidgetsContainer.style.display = 'flex';
                 loadAllSavedData(); // Load all data on initial entry
-                initializeDraggableElements(); 
-                positionWidgetButtons(); 
+                initializeDraggableElements();
+                positionWidgetButtons();
                 showImportantNoticeModal(); // Show the new modal after loading main content
             });
         }
@@ -2043,7 +2043,7 @@
                         let distance = Math.sqrt(((particlesArray[a].x - particlesArray[b].x) ** 2) + ((particlesArray[a].y - particlesArray[b].y) ** 2));
                         if (distance < (canvas.width / 100 * 12) ) {
                             opacityValue = 1 - (distance / (canvas.width / 100 * 12) );
-                            ctx.strokeStyle = `rgba(${connectionRgb}, ${opacityValue * 0.4})`; 
+                            ctx.strokeStyle = `rgba(${connectionRgb}, ${opacityValue * 0.4})`;
                             ctx.lineWidth = 0.5;
                             ctx.beginPath();
                             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -2065,12 +2065,12 @@
         // --- BOTTOM WIDGETS LOGIC ---
         function positionWidgetButtons() {
             const widgetButtons = Array.from(bottomWidgetsContainer.children).filter(el => el.classList.contains('widget-toggle-button'));
-            let currentRightOffset = 10; 
+            let currentRightOffset = 10;
 
             widgetButtons.forEach(button => {
                 button.style.right = `${currentRightOffset}px`;
-                button.style.bottom = '10px'; 
-                currentRightOffset += button.offsetWidth + 10; 
+                button.style.bottom = '10px';
+                currentRightOffset += button.offsetWidth + 10;
             });
 
             if (openWidgetPanel) {
@@ -2087,37 +2087,37 @@
             const isAlreadyOpen = widgetToToggle === openWidgetPanel;
 
             if (openWidgetPanel) {
-                openWidgetPanel.classList.remove('active-widget'); 
+                openWidgetPanel.classList.remove('active-widget');
                 const oldButton = document.querySelector(`[data-widget-id="${openWidgetPanel.id}"]`);
                  if(oldButton) {
                     oldButton.classList.remove('active-toggle');
                     if (oldButton.id === 'toggleCopilot') oldButton.textContent = '💬';
                     else if (oldButton.id === 'toggleNotes') oldButton.textContent = '📝';
                     else if (oldButton.id === 'toggleUsers') oldButton.textContent = '👤';
-                    else if (oldButton.id === 'toggleAddBox') oldButton.textContent = '➕'; 
+                    else if (oldButton.id === 'toggleAddBox') oldButton.textContent = '➕';
                     else if (oldButton.id === 'toggleTheme') oldButton.textContent = '🎨';
                  }
             }
 
             if (isAlreadyOpen) {
-                openWidgetPanel = null; 
+                openWidgetPanel = null;
             } else {
-                widgetToToggle.classList.add('active-widget'); 
+                widgetToToggle.classList.add('active-widget');
                 const buttonRect = button.getBoundingClientRect();
-                widgetToToggle.style.bottom = `${window.innerHeight - buttonRect.top + 10}px`; 
+                widgetToToggle.style.bottom = `${window.innerHeight - buttonRect.top + 10}px`;
 
                 let panelRight = window.innerWidth - buttonRect.right;
-                if (buttonRect.right < widgetToToggle.offsetWidth) { 
-                    panelRight = 10; 
+                if (buttonRect.right < widgetToToggle.offsetWidth) {
+                    panelRight = 10;
                 }
                 widgetToToggle.style.right = `${panelRight}px`;
 
                 button.classList.add('active-toggle');
-                button.textContent = '❌'; 
+                button.textContent = '❌';
                 openWidgetPanel = widgetToToggle;
             }
         }
-        
+
         document.getElementById('toggleNotes')?.addEventListener('click', function() { toggleWidget(notesWidget, this); });
         document.getElementById('toggleUsers')?.addEventListener('click', function() { toggleWidget(usersWidget, this); });
         document.getElementById('toggleCopilot')?.addEventListener('click', function() { toggleWidget(copilotWidget, this); });
@@ -2130,7 +2130,7 @@
         document.getElementById('toggleAddBox')?.setAttribute('data-widget-id', 'addBoxWidget');
         toggleThemeButton?.setAttribute('data-widget-id', 'themeWidgetPanel');
 
-        window.addEventListener('resize', positionWidgetButtons); 
+        window.addEventListener('resize', positionWidgetButtons);
 
 
         // --- THEME WIDGET LOGIC ---
@@ -2153,7 +2153,7 @@
             const rgb = rgbString.split(',').map(Number);
             return "#" + ((1 << 24) + (rgb[0] << 16) + (rgb[1] << 8) + rgb[2]).toString(16).slice(1).toUpperCase();
         }
-        
+
         function applyCurrentTheme() {
             themeColorInputs.forEach(inputConfig => {
                 const inputElement = document.getElementById(inputConfig.id);
@@ -2212,7 +2212,7 @@
             createCustomAlert('Tema aplicado.');
         });
         resetThemeBtn?.addEventListener('click', resetThemeToDefaults);
-        
+
 
         // --- TIMER (IN TOP BAR) ---
         const topTimerDisplay = document.getElementById('topTimerDisplay');
@@ -2220,7 +2220,7 @@
         const startTimerBtnTop = document.getElementById('startTimerBtnTop');
         const stopTimerBtnTop = document.getElementById('stopTimerBtnTop');
         const resetTimerBtnTop = document.getElementById('resetTimerBtnTop');
-        let alarmSound = document.getElementById('alarmSound'); 
+        let alarmSound = document.getElementById('alarmSound');
 
         let timerInterval;
         let totalSeconds = 0;
@@ -2229,10 +2229,10 @@
         if (!alarmSound) {
             const audioEl = document.createElement('audio');
             audioEl.id = 'alarmSound';
-            audioEl.src = 'MorningFlower.mp3'; 
+            audioEl.src = 'MorningFlower.mp3';
             audioEl.preload = 'auto';
             document.body.appendChild(audioEl);
-            alarmSound = audioEl; 
+            alarmSound = audioEl;
         }
 
         if (alarmSound) {
@@ -2338,7 +2338,7 @@
                 if (notesArea.value) {
                     notesArea.select();
                     notesArea.setSelectionRange(0, 99999);
-                    document.execCommand('copy'); 
+                    document.execCommand('copy');
                     createCustomAlert('Notes copied to clipboard.');
                 } else {
                     createCustomAlert('No notes to copy.');
@@ -2353,13 +2353,13 @@
                 });
             });
         }
-        
+
         if (copyUsersButton && usersArea) {
             copyUsersButton.addEventListener('click', function() {
                 if (usersArea.value) {
                     usersArea.select();
                     usersArea.setSelectionRange(0, 99999);
-                    document.execCommand('copy'); 
+                    document.execCommand('copy');
                     createCustomAlert('User list copied to clipboard.');
                 } else {
                     createCustomAlert('No users to copy.');
@@ -2439,14 +2439,14 @@
             let newItemContent = initialContent;
 
             const isDynamicBox = checkboxGroupElement.closest('.draggable-box[data-is-dynamic="true"]');
-            if (!initialTitle && !initialContent) { 
+            if (!initialTitle && !initialContent) {
                 newItemTitle = prompt("Ingrese el TÍTULO para el nuevo checkbox (lo que se muestra):");
                 if (!newItemTitle || newItemTitle.trim() === "") {
                     createCustomAlert("El título del checkbox no puede estar vacío.");
                     return;
                 }
                 newItemContent = prompt("Ingrese el CONTENIDO para el nuevo checkbox (lo que se copia):", newItemTitle);
-                if (newItemContent === null) { 
+                if (newItemContent === null) {
                     return;
                 }
             }
@@ -2458,20 +2458,20 @@
             const label = document.createElement('label');
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            checkbox.value = newItemContent; 
-            checkbox.checked = isChecked; 
+            checkbox.value = newItemContent;
+            checkbox.checked = isChecked;
 
             checkbox.addEventListener('change', () => {
                 const activeTab = document.querySelector('.tab-content.active');
                 if (activeTab && activeTab.id === 'sub-tab-genericas') {
                     actualizarPruebasRealizadas();
                 } else if (activeTab && activeTab.id === 'sub-tab-quejas') {
-                    updateMemoPruebasRealizadas(); 
+                    updateMemoPruebasRealizadas();
                 }
             });
 
             label.appendChild(checkbox);
-            label.appendChild(document.createTextNode(newItemTitle)); 
+            label.appendChild(document.createTextNode(newItemTitle));
 
             const removeButton = document.createElement('button');
             removeButton.type = 'button';
@@ -2498,7 +2498,7 @@
                     if (activeTab && activeTab.id === 'sub-tab-genericas') {
                         actualizarPruebasRealizadas();
                     } else if (activeTab && activeTab.id === 'sub-tab-quejas') {
-                        updateMemoPruebasRealizadas(); 
+                        updateMemoPruebasRealizadas();
                     }
                 }
             });
@@ -2510,7 +2510,7 @@
         const formContainerMemoQuejas = document.getElementById('formContainerMemoQuejas');
         const copyMemoQuejaButton = document.getElementById('copyMemoQuejaButton');
         const clearMemoQuejaButton = document.getElementById('clearMemoQuejaButton');
-        const addMemoFieldBtn = document.getElementById('addMemoFieldBtn'); 
+        const addMemoFieldBtn = document.getElementById('addMemoFieldBtn');
 
         const predefinedMemoTemplates = {
             "INTERNET DSL": [
@@ -2583,7 +2583,7 @@
         let customMemoTemplates = JSON.parse(localStorage.getItem('customMemoTemplates')) || {};
 
         function renderMemoFields(templateName) {
-            formContainerMemoQuejas.innerHTML = ''; 
+            formContainerMemoQuejas.innerHTML = '';
             const templateFields = [...(predefinedMemoTemplates[templateName] || []), ...(customMemoTemplates[templateName] || [])];
 
             const quienGeneraWrapper = document.createElement('div');
@@ -2592,7 +2592,7 @@
             quienGeneraLabel.textContent = 'Quien genera queja:';
             quienGeneraWrapper.appendChild(quienGeneraLabel);
             const inlineGroup = document.createElement('div');
-            inlineGroup.className = 'checkbox-group-inline'; 
+            inlineGroup.className = 'checkbox-group-inline';
             ['Telefónico', 'Corporativo'].forEach(val => {
                 const div = document.createElement('div');
                 const check = document.createElement('input');
@@ -2602,7 +2602,7 @@
                 lbl.htmlFor = check.id; lbl.appendChild(document.createTextNode(val));
                 div.appendChild(lbl);
                 inlineGroup.appendChild(div);
-                check.addEventListener('change', updateMemoPruebasRealizadas); 
+                check.addEventListener('change', updateMemoPruebasRealizadas);
             });
             quienGeneraWrapper.appendChild(inlineGroup);
             formContainerMemoQuejas.appendChild(quienGeneraWrapper);
@@ -2611,7 +2611,7 @@
             templateFields.forEach((field) => {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'form-group';
-                wrapper.setAttribute('data-field-id', field.id); 
+                wrapper.setAttribute('data-field-id', field.id);
 
                 const labelEl = document.createElement('label');
                 labelEl.textContent = field.label;
@@ -2619,7 +2619,7 @@
 
                 if(field.type === 'checkbox-group') {
                     const grupo = document.createElement('div');
-                    grupo.className = 'checkbox-group-inline'; 
+                    grupo.className = 'checkbox-group-inline';
                     field.options.forEach((opcion, optIndex) => {
                         const contenedor = document.createElement('div');
                         const checkbox = document.createElement('input');
@@ -2631,7 +2631,7 @@
                         optionLabel.appendChild(document.createTextNode(opcion));
                         contenedor.appendChild(optionLabel);
                         grupo.appendChild(contenedor);
-                        checkbox.addEventListener('change', updateMemoPruebasRealizadas); 
+                        checkbox.addEventListener('change', updateMemoPruebasRealizadas);
                     });
                     wrapper.appendChild(labelEl);
                     wrapper.appendChild(grupo);
@@ -2650,7 +2650,7 @@
                     removeBtn.className = 'remove-dynamic-field-btn';
                     removeBtn.textContent = 'X';
                     removeBtn.title = 'Eliminar este campo';
-                    removeBtn.onclick = () => removeMemoField(field.id, templateName); 
+                    removeBtn.onclick = () => removeMemoField(field.id, templateName);
                     wrapper.appendChild(removeBtn);
                 }
 
@@ -2658,7 +2658,7 @@
             });
 
             document.querySelectorAll('#sub-tab-quejas .checkboxes-area-tab .checkbox-group input[type="checkbox"]').forEach(checkbox => {
-                checkbox.removeEventListener('change', updateMemoPruebasRealizadas); 
+                checkbox.removeEventListener('change', updateMemoPruebasRealizadas);
                 checkbox.addEventListener('change', updateMemoPruebasRealizadas);
             });
         }
@@ -2694,10 +2694,10 @@
         if (opcionesMemoQuejasDropdown) {
             opcionesMemoQuejasDropdown.addEventListener('change', function () {
                 const seleccion = this.value;
-                renderMemoFields(seleccion); 
+                renderMemoFields(seleccion);
                 copyMemoQuejaButton.style.display = 'block';
                 clearMemoQuejaButton.style.display = 'block';
-                addMemoFieldBtn.style.display = 'block'; 
+                addMemoFieldBtn.style.display = 'block';
                 const savedData = JSON.parse(localStorage.getItem('omegaAppData'));
                 if (savedData && savedData.memoQuejasData?.selectedType === seleccion && savedData.memoQuejasData.fields) {
                     for (const fieldId in savedData.memoQuejasData.fields) {
@@ -2722,7 +2722,7 @@
             opcionesMemoQuejasDropdown.selectedIndex = 0;
             copyMemoQuejaButton.style.display = 'none';
             clearMemoQuejaButton.style.display = 'none';
-            addMemoFieldBtn.style.display = 'none'; 
+            addMemoFieldBtn.style.display = 'none';
             document.querySelectorAll('#sub-tab-quejas .checkbox-group input[type="checkbox"]').forEach(checkbox => {
                 checkbox.checked = false;
             });
@@ -2792,7 +2792,7 @@
             let fieldOptions = [];
             if (fieldType === 'checkbox') {
                 const optionsInput = prompt("Ingrese las opciones del checkbox separadas por comas (ej: Opción 1, Opción 2):");
-                if (optionsInput === null) return; 
+                if (optionsInput === null) return;
                 fieldOptions = optionsInput.split(',').map(opt => opt.trim()).filter(opt => opt !== '');
                 if (fieldOptions.length === 0) {
                     createCustomAlert("Debe ingresar al menos una opción para el checkbox.");
@@ -2803,9 +2803,9 @@
             const newField = {
                 label: fieldLabel.trim(),
                 type: fieldType === 'checkbox' ? 'checkbox-group' : fieldType,
-                id: `dynamicField_${Date.now()}`, 
+                id: `dynamicField_${Date.now()}`,
                 options: fieldOptions,
-                dynamic: true 
+                dynamic: true
             };
 
             if (!customMemoTemplates[selectedMemoType]) {
@@ -2814,7 +2814,7 @@
             customMemoTemplates[selectedMemoType].push(newField);
             localStorage.setItem('customMemoTemplates', JSON.stringify(customMemoTemplates));
 
-            renderMemoFields(selectedMemoType); 
+            renderMemoFields(selectedMemoType);
             createCustomAlert(`Campo "${fieldLabel}" agregado al memo "${selectedMemoType}".`);
         });
 
@@ -2823,7 +2823,7 @@
                 if (customMemoTemplates[memoType]) {
                     customMemoTemplates[memoType] = customMemoTemplates[memoType].filter(field => field.id !== fieldIdToRemove);
                     localStorage.setItem('customMemoTemplates', JSON.stringify(customMemoTemplates));
-                    renderMemoFields(memoType); 
+                    renderMemoFields(memoType);
                     createCustomAlert(`Campo eliminado del memo "${memoType}".`);
                 }
             });
@@ -2847,7 +2847,7 @@
         }
 
         function renderWFMemosFields(templateName) {
-            formContainerWFMemos.innerHTML = ''; 
+            formContainerWFMemos.innerHTML = '';
             const templateFields = predefinedWFMemos[templateName] || [];
 
             templateFields.forEach((field) => {
@@ -2918,7 +2918,7 @@
             });
         });
 
-        loadWFMemosTemplates(); 
+        loadWFMemosTemplates();
 
 
         // --- MEMOS DE ORDEN (Sub-Tab) ---
@@ -2938,7 +2938,7 @@
         }
 
         function renderOrdenMemosFields(templateName) {
-            formContainerOrdenMemos.innerHTML = ''; 
+            formContainerOrdenMemos.innerHTML = '';
             const templateFields = predefinedOrdenMemos[templateName] || [];
 
             templateFields.forEach((field) => {
@@ -3009,7 +3009,7 @@
             });
         });
 
-        loadOrdenMemosTemplates(); 
+        loadOrdenMemosTemplates();
 
 
         // --- SAVED TEMPLATES (COPIA DE RESPALDO Tab) ---
@@ -3049,11 +3049,11 @@
             { service: "CAMBIO DE CONTRASEÑA Y DEMAS", value: "24201400" },
             { service: "LLAMADAS DESDE TIGO", value: "25028850" },
             { service: "WHATSAPP", value: "42147100" },
-            { service: "migración gpon", value: "gt_quejas_migracion_gpon" }
+            { service: "migración gpon", value: "gt_quejas_migracion_gpon" }, // Added missing comma here
             { service: "Backoffice Residencial", value: "GT_BO_Residencial" }
         ];
         function renderTransferItems() {
-            dynamicTransfersList.innerHTML = ''; 
+            dynamicTransfersList.innerHTML = '';
             const allTransfers = [...defaultTransferItems, ...customTransferItems];
             allTransfers.forEach((item, index) => {
                 const p = document.createElement('p');
@@ -3066,7 +3066,7 @@
                     removeButton.type = 'button';
                     removeButton.className = 'manage-button remove-item';
                     removeButton.textContent = 'X';
-                    removeButton.onclick = function() { removeTransferItem(this, item.service); }; 
+                    removeButton.onclick = function() { removeTransferItem(this, item.service); };
                     p.appendChild(removeButton);
                 }
                 dynamicTransfersList.appendChild(p);
@@ -3079,7 +3079,7 @@
                 return;
             }
             const value = prompt("Enter the VALUE for the new transfer (e.g., number or name):");
-            if (value === null) { 
+            if (value === null) {
                 return;
             }
             customTransferItems.push({ service: service.trim(), value: value.trim() });
@@ -3093,12 +3093,12 @@
                 if (itemContainer) {
                     customTransferItems = customTransferItems.filter(item => item.service !== serviceToRemove);
                     localStorage.setItem('customTransferItems', JSON.stringify(customTransferItems));
-                    renderTransferItems(); 
+                    renderTransferItems();
                     createCustomAlert(`Transfer for "${serviceToRemove}" deleted.`);
                 }
             });
         }
-        renderTransferItems(); 
+        renderTransferItems();
 
 
         // --- AVISOS TAB (AVISOS Tab) ---
@@ -3109,7 +3109,7 @@
                 if (existingErrorMessage) {
                     existingErrorMessage.remove();
                 }
-                iframe.style.display = 'block'; 
+                iframe.style.display = 'block';
                 iframe.src = docUrl;
                 console.log(`Cargando documento en ${iframeId}: ${docUrl}`);
             } else {
@@ -3274,7 +3274,7 @@
 
                 if (savedData.memoQuejasData?.selectedType) {
                     opcionesMemoQuejasDropdown.value = savedData.memoQuejasData.selectedType;
-                    opcionesMemoQuejasDropdown.dispatchEvent(new Event('change')); 
+                    opcionesMemoQuejasDropdown.dispatchEvent(new Event('change'));
                     if (savedData.memoQuejasData.fields) {
                         for (const fieldId in savedData.memoQuejasData.fields) {
                             if (fieldId === 'quienGenera') {
@@ -3291,7 +3291,7 @@
                         }
                     }
                 } else {
-                    clearMemoQueja(); 
+                    clearMemoQueja();
                 }
 
                 if (savedData.checkboxStatesTab2) {
@@ -3398,7 +3398,7 @@
         });
 
         exportDataBtn?.addEventListener('click', () => {
-            const dataToExport = JSON.parse(localStorage.getItem('omegaAppData')); 
+            const dataToExport = JSON.parse(localStorage.getItem('omegaAppData'));
             if (!dataToExport) {
                 createCustomAlert('No data to export. Please save some data first.');
                 return;
@@ -3424,8 +3424,8 @@
                     try {
                         const importedData = JSON.parse(e.target.result);
                         createCustomConfirm('Are you sure you want to import this data? This will overwrite current data.', () => {
-                            localStorage.setItem('omegaAppData', JSON.stringify(importedData)); 
-                            loadAllSavedData(); 
+                            localStorage.setItem('omegaAppData', JSON.stringify(importedData));
+                            loadAllSavedData();
                             createCustomAlert('Data imported successfully.');
                         });
                     } catch (error) {
@@ -3443,20 +3443,20 @@
             let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
             let isResizing = false;
             const dragHandle = elmnt.querySelector(".drag-handle");
-            const minWidth = 280; 
-            const minHeight = 150; 
+            const minWidth = 280;
+            const minHeight = 150;
 
             function dragMouseDown(e) {
                 e = e || window.event;
                 e.preventDefault();
                 const rect = elmnt.getBoundingClientRect();
-                const resizeHandleSize = 15; 
+                const resizeHandleSize = 15;
                 if (e.clientX > rect.right - resizeHandleSize && e.clientY > rect.bottom - resizeHandleSize) {
                     isResizing = true;
                     elmnt.style.cursor = 'se-resize';
                 } else {
                     isResizing = false;
-                    if (dragHandle && dragHandle.contains(e.target)) { 
+                    if (dragHandle && dragHandle.contains(e.target)) {
                         elmnt.style.cursor = 'grabbing';
                     }
                 }
@@ -3465,11 +3465,11 @@
                 pos4 = e.clientY;
                 document.onmouseup = closeDragOrResizeElement;
                 document.onmousemove = elementDragOrResize;
-                
+
                 if (isResizing || (dragHandle && dragHandle.contains(e.target))) {
                     elmnt.classList.add("dragging");
-                    elmnt.style.position = 'absolute'; 
-                    elmnt.style.zIndex = parseInt(elmnt.style.zIndex || 1) + 99; 
+                    elmnt.style.position = 'absolute';
+                    elmnt.style.zIndex = parseInt(elmnt.style.zIndex || 1) + 99;
                 }
             }
 
@@ -3484,7 +3484,7 @@
                     if (newHeight >= minHeight) elmnt.style.height = newHeight + "px";
                     pos3 = e.clientX;
                     pos4 = e.clientY;
-                } else if (elmnt.classList.contains("dragging") && dragHandle && elmnt.style.cursor === 'grabbing') { 
+                } else if (elmnt.classList.contains("dragging") && dragHandle && elmnt.style.cursor === 'grabbing') {
                     pos1 = pos3 - e.clientX;
                     pos2 = pos4 - e.clientY;
                     pos3 = e.clientX;
@@ -3501,7 +3501,7 @@
                 document.onmousemove = null;
                 if (elmnt.classList.contains("dragging")) {
                     elmnt.classList.remove("dragging");
-                    elmnt.style.zIndex = parseInt(elmnt.style.zIndex || 100) - 98; 
+                    elmnt.style.zIndex = parseInt(elmnt.style.zIndex || 100) - 98;
                 }
                 elmnt.style.cursor = dragHandle && dragHandle.contains(event.target) ? 'grab' : 'default';
                 isResizing = false;
@@ -3524,16 +3524,16 @@
             const activeTab = document.querySelector('.tab-content.active');
             if (activeTab) {
                 activeTab.querySelectorAll('.draggable-box').forEach(box => {
-                    if (!box.style.left && !box.style.top && box.style.position !== 'absolute') { 
+                    if (!box.style.left && !box.style.top && box.style.position !== 'absolute') {
                         const rect = box.getBoundingClientRect();
                         const containerRect = activeTab.getBoundingClientRect();
                         let initialTop = rect.top - containerRect.top + activeTab.scrollTop;
                         let initialLeft = rect.left - containerRect.left + activeTab.scrollLeft;
-                        
+
                         const parentCheckboxesArea = box.closest('.checkboxes-area-tab');
                         if (parentCheckboxesArea && parentCheckboxesArea.contains(box)) {
                             const parentAreaRect = parentCheckboxesArea.getBoundingClientRect();
-                            initialTop = rect.top - parentAreaRect.top + parentCheckboxesArea.scrollLeft; 
+                            initialTop = rect.top - parentAreaRect.top + parentCheckboxesArea.scrollLeft;
                             initialLeft = rect.left - parentAreaRect.left + parentCheckboxesArea.scrollLeft;
                         }
 
@@ -3575,8 +3575,8 @@
             const newBox = document.createElement('div');
             newBox.className = 'draggable-box';
             newBox.id = newBoxId;
-            newBox.dataset.isDynamic = 'true'; 
-            const dragHandle = document.createElement('h3'); 
+            newBox.dataset.isDynamic = 'true';
+            const dragHandle = document.createElement('h3');
             dragHandle.className = 'drag-handle';
             const titleSpan = document.createElement('span');
             titleSpan.textContent = newBoxTitle.trim();
@@ -3605,11 +3605,11 @@
             `;
             newBox.appendChild(contentDiv);
             const dynamicCheckboxGroup = newBox.querySelector('.checkbox-group.dynamic-checkbox-area');
-            
+
             container.appendChild(newBox);
             newBox.style.position = 'absolute';
-            newBox.style.left = '20px'; 
-            newBox.style.top = '20px';  
+            newBox.style.left = '20px';
+            newBox.style.top = '20px';
             makeElementDraggableAndResizable(newBox);
             createCustomAlert(`Box "${newBoxTitle}" added.`);
             toggleWidget(addBoxWidget, document.getElementById('toggleAddBox'));
@@ -3656,7 +3656,7 @@
                 });
             }
             container.appendChild(newBox);
-            makeElementDraggableAndResizable(newBox); 
+            makeElementDraggableAndResizable(newBox);
             return newBox;
         };
         window.editBoxTitle = function(titleSpanElement) {
@@ -3664,7 +3664,7 @@
             const newTitle = prompt("Edit the box title:", currentTitle);
             if (newTitle !== null && newTitle.trim() !== "") {
                 titleSpanElement.textContent = newTitle.trim();
-            } else if (newTitle !== null && newTitle.trim() === "") { 
+            } else if (newTitle !== null && newTitle.trim() === "") {
                 createCustomAlert("Title cannot be empty.");
             }
         };
@@ -3680,7 +3680,7 @@
         function createCustomAlert(message) {
             const modalId = 'customAlertModal';
             let modal = document.getElementById(modalId);
-            if (modal) modal.remove(); 
+            if (modal) modal.remove();
             modal = document.createElement('div');
             modal.id = modalId;
             modal.style.cssText = `
@@ -3702,7 +3702,7 @@
         function createCustomConfirm(message, onConfirm) {
             const modalId = 'customConfirmModal';
             let modal = document.getElementById(modalId);
-            if (modal) modal.remove(); 
+            if (modal) modal.remove();
             modal = document.createElement('div');
             modal.id = modalId;
             modal.style.cssText = `
@@ -3740,16 +3740,16 @@
                     if (isNaN(minutes)) {
                         createCustomAlert("Por favor, ingrese un número válido para los minutos.");
                         secondsResult.textContent = "Error";
-                        secondsResult.classList.remove('result-red', 'result-green'); 
+                        secondsResult.classList.remove('result-red', 'result-green');
                     } else if (minutes < 0) {
                         createCustomAlert("Los minutos no pueden ser negativos.");
                         secondsResult.textContent = "Error";
-                        secondsResult.classList.remove('result-red', 'result-green'); 
+                        secondsResult.classList.remove('result-red', 'result-green');
                     } else {
-                        const seconds = Math.floor(minutes * 60); 
+                        const seconds = Math.floor(minutes * 60);
                         secondsResult.textContent = `${seconds} Segundos`;
 
-                        const thresholdSeconds = 372; 
+                        const thresholdSeconds = 372;
                         if (seconds > thresholdSeconds) {
                             secondsResult.classList.add('result-red');
                             secondsResult.classList.remove('result-green');
@@ -3793,7 +3793,7 @@
                 switchTab(firstMainTab.dataset.tab, false);
             }
         }
-        
+
         initializeTMOCalculator();
 
     }); // End DOMContentLoaded
